@@ -23,4 +23,4 @@ jobs:
 
       - name: Checking pushes with pylint
         run: |
-          pylint --fail-under 8 $(git ls-files '*.py')
+          pylint --fail-under=8 $(git ls-files '*.py')
