@@ -1,10 +1,11 @@
+'''Revision Program'''
 
 
 def read_file(file_name: str) -> list[str]:
     '''reads in the file and splits it up by line'''
     with open(file_name) as file:
-        data = file.read()
-    return data.split('\n')
+        raw_data = file.read()
+    return raw_data.split('\n')
 
 
 def clean_data(data: list[str]) -> list[str]:
@@ -16,6 +17,6 @@ def clean_data(data: list[str]) -> list[str]:
 
 
 if __name__ == "__main__":
-    data = read_file('example.txt')
-    data = clean_data(data)
-    print(data)
+    source_data = read_file('example.txt')
+    cleaned_data = clean_data(source_data)
+    print(cleaned_data)
