@@ -18,9 +18,9 @@ def clean_data(data: list[str]) -> list[str]:
     return data
 
 
-def randomiser(quantity_lines: int):
+def randomiser(quantity_lines: int, extract_size: int = 1):
     '''to randomise the lines that are sent'''
-    number = random.randint(1, quantity_lines)
+    number = random.randint(0, quantity_lines - extract_size)
     print(number)
 
 
