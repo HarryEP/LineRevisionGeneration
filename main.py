@@ -18,15 +18,17 @@ def clean_data(data: list[str]) -> list[str]:
     return data
 
 
-def randomiser(quantity_lines: int, extract_size: int = 1):
+def randomiser(quantity_lines: int, all_lines: list[str], extract_size: int = 1):
     '''to randomise the lines that are sent'''
     number = random.randint(0, quantity_lines - extract_size)
     print(number)
+    return all_lines[number:number+extract_size]
 
 
 if __name__ == "__main__":
     # get user inputs like how many lines/which book they want etc
-    randomiser(4)
     source_data = read_file('example.txt')
     cleaned_data = clean_data(source_data)
-    # print(cleaned_data)
+    print(cleaned_data)
+    lines = randomiser(len(cleaned_data), cleaned_data, 1)
+    print(lines)
