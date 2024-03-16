@@ -33,7 +33,7 @@ def display_lines(lines: list[str]):
 def main():
     '''this function is to run everything and ask the user necessary questions'''
     num_lines_wanted = int(input("How many lines would you like?: "))
-    source_data = read_file('example.txt')
+    source_data = read_file('T_and_C.txt')
     cleaned_data = clean_data(source_data)
     lines = randomiser(len(cleaned_data), cleaned_data, num_lines_wanted)
     display_lines(lines)
