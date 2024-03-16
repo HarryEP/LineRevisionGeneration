@@ -1,5 +1,6 @@
 venv
 .github
 spare.py
+__pycache__
 
 T_and_C.txt
