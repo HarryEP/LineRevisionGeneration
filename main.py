@@ -1,6 +1,19 @@
 '''Revision Program'''
 
 import random
+import requests
+
+
+def fetch_google_file(url):
+    '''function to get the file from a google docs file'''
+    try:
+        response = requests.get(url, timeout=120)
+        return response.status_code
+    except response.Timeout:
+        print("Request timed out, please try again")
+    except Exception as e:
+        print(f"An error ({e} occured")
+    return None
 
 
 def read_file(file_name: str) -> list[str]:
